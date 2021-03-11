@@ -40,7 +40,7 @@ Here's a walkthrough of implemented user stories:
 
 ## Notes
 
-I attempted to work with class based views as an added challenged becuase I've only read about them, I spent quite a bit of time reading more documents than coding. For each post, instead of habving the large photos stored in the media folder, I used imgur urls to retrieve them. The comment system is kinda working eh...
+I attempted to work with class based views as an added challenged becuase I've only read about them, I spent quite a bit of time reading more documents than coding. For each post, instead of having the large photos stored in the media folder, I used imgur urls to retrieve them. The comment system is kinda working eh... The hardest part was trying to do things as per the django docs (I don't think that I did). I tried to be semanitcally corrct but that didn't quite work out
 
 ## License
 
