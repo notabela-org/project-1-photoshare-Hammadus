@@ -2,7 +2,7 @@
 # Project 1 | **PhotoShare**
 
 **PhotoShare** - A simple PhotoSharing Application
-Time spent: **XX** hours spent in total
+Time spent: **~3 days** hours spent in total
 
 ## User Stories
 
@@ -40,7 +40,7 @@ Here's a walkthrough of implemented user stories:
 
 ## Notes
 
-I attempted to work with class based views as an added challenged becuase I've only read about them, I spent quite a bit of time reading documents than coding. 
+I attempted to work with class based views as an added challenged becuase I've only read about them, I spent quite a bit of time reading more documents than coding. For each post, instead of habving the large photos stored in the media folder, I used imgur urls to retrieve them. The comment system is kinda working eh...
 
 ## License
 
