@@ -36,7 +36,7 @@ A coverage report is included at: [insert coverage report path]
 
 Here's a walkthrough of implemented user stories:
 
-<img src='[insert_gif_source_here]' title='Video Walkthrough' alt='Video Walkthrough' />
+<img src='[http://g.recordit.co/oXyOWeEA1O.gif]' title='Video Walkthrough' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
