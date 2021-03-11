@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Home{% endblock %}
+{% block body %}
+
+   <div class = "row">
+        <div class="col-md-8 col-centered">
+
+        	<div class="card">
+
+	        	<div class="card-header">
+
+	        		<div class="d-flex justify-content-between">
+					    <div>
+					    	<img class="rounded-circle article-img"src="{{ object.author.profile.image.url }}">
+					    	<a href="{% url 'user-detail' object.author.username %}">{{ object.author }}</a>
+						</div>
+					    <div>{{object.dateposted|date:"F d, Y"}}</div>
+					</div>
+	        	
+	        	</div>
+
+				<img class="card-img-top" src="{{post.imageurl}}" alt="Card image">
+					<div class="card-footer">
+						<h6 class="card-title"> {{object.caption}} </h6>
+					</div>
+			</div>
+
+			<div class="col-md-8 card mb-4  mt-3 col-centered">
+			      <div class="card-body">
+			        <!-- comments -->
+			        <h5>{{ post.comments.count }} Comments:</h5>
+
+			        {% for comment in post.comments.all %}
+			        <div class="comments" style="padding: 10px;">
+			          <p class="font-weight-bold">
+			            <a href="{% url 'user-detail' object.author.username %}">{{ comment.author }}</a>
+			            <span class=" text-muted font-weight-normal">
+			              {{ comment.dateposted|date:"F d, Y" }}
+			            </span>
+			          </p>
+			          {{ comment.body | linebreaks }}
+			        </div>
+			        {% endfor %}
+			      </div>
+			    </div>
+			    <div class="col-md-8 card mb-4  mt-3 ">
+			      <div class="card-body">
+			        <h3>Leave a comment</h3>
+					
+
+						<form method="POST">
+				          	{% csrf_token %}
+				         	<fieldset class="form-group">
+				            	<legend class="border-bottom mb-4">Enter:</legend>
+				            		{{ comment_form|crispy }}
+				          	</fieldset>
+				          	<div class="form-group">
+				            	<button class="btn btn-outline-info" type="submit">Add Comment</button>
+				          	</div>
+				      	</form>
+			      
+
+			      </div>
+			    </div>
+			  </div>
+
+        </div>
+    </div>
+
+{% endblock %}

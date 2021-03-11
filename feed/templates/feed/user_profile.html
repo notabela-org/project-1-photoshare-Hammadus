@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+	<div class = "row">
+        <div class="col-md-8 col-centered">
+        	<img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        	<p> {{ user.username }} </p>
+        	<h4> About: </h4>
+        	<p>
+        		{{ user.profile.bio }}
+        	</p>
+        </div>
+    </div>
+
+{% endblock %}

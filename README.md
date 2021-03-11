@@ -10,19 +10,19 @@ The following **required** functionality is completed:
 
 - [X] User can sign up to create a new account
 - [X] User can log in and log out of her account
-- [ ] Each user has a profile page that shows her username, profile photo, short bio and all their posts
-- [ ] A Logged in user can edit her profile photo, her username and short bio (only hers but not others)
-- [ ] A Logged in User can create a new post by uploading a photo and adding a description
-- [ ] A Logged in User can add a comment on a post
-- [ ] A Logged in User can view all the posts submitted on the platform, each posts shows the post's user's username and profile photo, when the post was created, the post's photo, the description and number of comments
-- [ ] Tapping on a post's user's username or profile photo goes to that user's profile page
-- [ ] A Logged in user can view all the comments on a post, each comment shows the username and profile photo of the user who posted the comment and the date the comment was posted
-- [ ] Anonymous users (unathenticated users) can only access the sign up and login pages
+- [X] Each user has a profile page that shows her username, profile photo, short bio and all their posts
+- [X] A Logged in user can edit her profile photo, her username and short bio (only hers but not others)
+- [X] A Logged in User can create a new post by uploading a photo and adding a description
+- [X] A Logged in User can add a comment on a post
+- [X] A Logged in User can view all the posts submitted on the platform, each posts shows the post's user's username and profile photo, when the post was created, the post's photo, the description and number of comments
+- [X] Tapping on a post's user's username or profile photo goes to that user's profile page
+- [X] A Logged in user can view all the comments on a post, each comment shows the username and profile photo of the user who posted the comment and the date the comment was posted
+- [X] Anonymous users (unathenticated users) can only access the sign up and login pages
 
 The following **optional** features are implemented:
 
 - [ ] A Logged In User can like and Unlike posts (might require some javascript to work properly)
-- [ ] Posts view is paginated
+- [X] Posts view is paginated
 - [ ] A User can submit and accept friend requests
 - [ ] A User cannot see another user's post unless they are friends
 - [ ] A user can reset their password if they forgot (will likely require adding email to sign up)
@@ -42,11 +42,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I attempted to work with class based views as an added challenged becuase I've only read about them, I spent quite a bit of time reading documents than coding. 
 
 ## License
 
-    Copyright [Year] [Name]
+    Copyright [2021] [Hammad Saeed]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

@@ -3,14 +3,72 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-<div class='container'>
-    <figure class='text-center mt-5'>
-        <blockquote class='blockquote'>
-          <p>The world is but a canvas to our imagination</p>
-        </blockquote>
-        <figcaption class='blockquote-footer'>
-          Henry David Thoreau
-        </figcaption>
-      </figure>
-</div>
+
+<!--
+		'author':'Hammadus',
+		'comments':'wow, so cool man',
+		'content':'https://mdbootstrap.com/img/new/standard/nature/184.jpg',
+		'caption':'mountaints',
+		'dateposted':'March 7, 2021'
+
+		<div class="card">
+		  <div class="card-header">Header</div>
+		  <div class="card-body">Content</div>
+		  <div class="card-footer">Footer</div>
+		</div>
+-->   
+
+   <div class = "row">
+        <div class="col-md-8 col-centered">
+
+			{% for post in posts %}
+
+	        	<div class="card">
+
+		        	<div class="card-header">
+
+		        		<div class="d-flex justify-content-between">
+						    <div>
+						    	<img class="rounded-circle article-img"src="{{ post.author.profile.image.url }}">
+						    	<a href="{% url 'user-detail' post.author.username %}">{{ post.author }}</a>
+							</div>
+						    <div>{{ post.dateposted|date:"F d, Y"}}</div>
+						</div>
+		        	
+		        	</div>
+
+					<img class="card-img-top h-100" src="{{post.imageurl}}" alt="Card image">
+						<div class="card-footer">
+							<h6 class="card-title"> {{post.caption}} </h6>
+							<p class="card-text">
+								<a href="{% url 'post-detail' post.id %}">
+									Comments | {{ post.comments.count }}
+								</a> 
+							</p>
+						</div>
+				</div>
+
+			{% endfor %}
+
+			{% if is_paginated %}
+				{% if page_obj.has_previous %}
+					<a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+					<a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+				{% endif %}
+
+				{% for num in page_obj.paginator.page_range %}
+					{% if page_obj.number == num %}
+						<a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+					{% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+						<a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+					{% endif %}
+				{% endfor %}
+
+				{% if page_obj.has_next %}
+			        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+			        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+			    {% endif %}
+			{% endif %}
+        </div>
+    </div>
 {% endblock %}

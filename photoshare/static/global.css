@@ -4,10 +4,65 @@ html {
 
 body {
     padding-bottom: 10rem;
+    background: #fafafa;
+  	color: #333333;
 }
 
 footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* This is a single-line comment */
+
+main {
+	padding-top: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+.col-centered {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card {
+	margin: 0 auto; /* Added */
+	float: none; /* Added */
+	margin-bottom: 30px; /* Added */
+	/*width:600px;*/
+}
+
+.card-title {
+	text-align: left;
+}
+
+.card-text {
+	text-align: left;
+}
+.comment-img {
+  height: 10px;
+  width: 10px;
+  margin-right: 16px;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.article-img {
+  height: 35px;
+  width: 35px;
+  margin-right: 16px;
 }
